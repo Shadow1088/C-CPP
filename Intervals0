@@ -1,0 +1,31 @@
+#include <stdio.h>       // this code is basically type num between 1 to 100 (min - max)
+
+#define MIN 1 // MIN (minimum) is 1
+#define MAX 100 // MAX (maximum) is 100
+
+int main() {
+
+    int num;
+    int countOfChar;
+
+    do { // THE LOOP RUNS AT LEAST ONCE
+
+    printf("Put num in interval: %d-%d: \n", MIN, MAX);      // the first %d is assigned to the MIN, the next one is assigned to the MAX !! first %d = first argument
+    scanf("%d", &num);
+    countOfChar = 0;
+
+    while(getchar() != '\n'){
+        countOfChar++;
+    }
+
+    if (countOfChar != 0) {
+    printf("Not a full num, try again\n");
+    }   else if (num < MIN || num > MAX) {           // if number less than minimum OR more than maximum print "bla bla bla"
+        printf("Not typed in interval");
+    }
+    }while (countOfChar != 0 || num < MIN || num > MAX);  // THE LOOP REPEATS ONLY IF AT LEAST ONE CONDITION IS FALSE
+    printf("The nums in interval, the num: %d\n", num); // ONCE ALL THE CONDITIONS ARE ALL TRUE => do this
+
+
+    return 0;
+}
