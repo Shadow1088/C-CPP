@@ -12,8 +12,8 @@ int main() {
 
     printf("Put num in interval: %d-%d: \n", MIN, MAX);      // the first %d is assigned to the MIN, the next one is assigned to the MAX !! first %d = first argument
     scanf("%d", &num);
+    
     countOfChar = 0;
-
     while(getchar() != '\n'){
         countOfChar++;
     }
